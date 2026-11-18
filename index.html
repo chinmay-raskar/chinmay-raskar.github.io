@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chinmay Raskar | Test Automation Architect and QE Manager</title>
+<meta name="description" content="Career report of Chinmay Raskar: Test Automation Architect and QE Manager, 11.5+ years, Playwright, TypeScript, CI/CD and AI-assisted test automation. Pune, India.">
+<meta name="theme-color" content="#16191d">
+<style>
+:root{
+  --bg:#f6f5f1;--panel:#ffffff;--ink:#1c2024;--mute:#5d6872;--line:#dedbd2;
+  --acc:#14704f;--acc2:#a35f00;--info:#1f5f8b;--chip:#eceae3;--term:#101418;--term-ink:#d6dde4;
+  --pass:#14704f;--run:#a35f00;
+}
+[data-theme="dark"]{
+  --bg:#16191d;--panel:#1d2227;--ink:#e8ebee;--mute:#98a3ae;--line:#2c343c;
+  --acc:#4cc38a;--acc2:#e8a93a;--info:#6fb1dc;--chip:#262d34;--term:#0d1013;--term-ink:#d6dde4;
+  --pass:#4cc38a;--run:#e8a93a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+a{color:var(--info)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:12px;top:12px;background:var(--panel);padding:8px 12px;z-index:20}
+:focus-visible{outline:2px solid var(--info);outline-offset:2px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:56px;gap:12px}
+.brand{font-weight:700}.brand small{color:var(--mute);font-weight:400;margin-left:8px}
+nav{display:flex;align-items:center;gap:4px;flex-wrap:wrap}
+nav a{color:var(--mute);text-decoration:none;font-size:14px;padding:6px 10px;border-radius:6px}
+nav a:hover,nav a.on{color:var(--ink);background:var(--chip)}
+.iconbtn{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:8px;height:34px;padding:0 12px;cursor:pointer;font:inherit;font-size:13px}
+.menu{display:none}
+@media(max-width:720px){
+  .menu{display:inline-block}
+  nav{display:none;position:absolute;top:56px;left:0;right:0;background:var(--panel);border-bottom:1px solid var(--line);padding:10px 16px;flex-direction:column;align-items:stretch}
+  nav.open{display:flex}
+  .brand small{display:none}
+}
+
+/* hero */
+.hero{padding:56px 0 28px}
+.badge{display:inline-flex;gap:8px;align-items:center;border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:13px;color:var(--mute);background:var(--panel)}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--acc)}
+h1{font-size:clamp(34px,6.4vw,58px);line-height:1.06;letter-spacing:-.025em;margin:16px 0 8px}
+.role{font-size:clamp(17px,2.6vw,22px);color:var(--acc);margin:0 0 14px;font-weight:600}
+.lead{color:var(--mute);max-width:660px;font-size:17.5px;margin:0 0 22px}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+.btn{display:inline-block;padding:10px 18px;border-radius:8px;border:1px solid var(--line);background:var(--panel);color:var(--ink);text-decoration:none;font-weight:600;font-size:15px}
+.btn.primary{background:var(--acc);border-color:var(--acc);color:#07140e}
+.btn:hover{filter:brightness(1.07)}
+
+/* terminal */
+.term{background:var(--term);border:1px solid var(--line);border-radius:12px;overflow:hidden;color:var(--term-ink)}
+.term .bar{display:flex;align-items:center;gap:7px;padding:10px 14px;border-bottom:1px solid #222a31;font-size:12.5px;color:#8b97a3}
+.term .bar i{width:10px;height:10px;border-radius:50%;background:#3a444d;display:inline-block}
+.term pre{margin:0;padding:16px 18px;font-size:13.5px;line-height:1.75;white-space:pre-wrap;word-break:break-word;min-height:190px}
+.ok{color:#4cc38a}.warn{color:#e8a93a}.dim{color:#7d8996}
+.cursor{display:inline-block;width:8px;height:15px;background:#d6dde4;vertical-align:-2px;animation:blink 1s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* panels */
+section{padding:44px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:12.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--mute);margin:0 0 6px}
+h2{font-size:clamp(24px,4vw,32px);line-height:1.2;letter-spacing:-.015em;margin:0 0 8px}
+.sub{color:var(--mute);max-width:640px;margin:0 0 24px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.grid{display:grid;gap:14px}
+.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+
+/* metric tiles */
+.tile{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.tile .n{font-size:38px;font-weight:700;letter-spacing:-.02em;line-height:1.1;color:var(--ink)}
+.tile .n em{font-style:normal;color:var(--acc)}
+.tile .l{color:var(--mute);font-size:14px;margin-top:4px}
+
+/* bars */
+.track{height:14px;border-radius:999px;background:var(--chip);overflow:hidden}
+.fill{height:100%;width:0;border-radius:999px;background:var(--acc);transition:width 1.3s cubic-bezier(.2,.7,.2,1)}
+.fill.amber{background:var(--acc2)}
+.row{display:flex;justify-content:space-between;gap:10px;font-size:14px;margin:0 0 6px;color:var(--mute)}
+.row b{color:var(--ink)}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:8px;overflow:hidden;margin:0 0 14px}
+.seg button{border:0;background:var(--panel);color:var(--mute);padding:6px 14px;font:inherit;font-size:13.5px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--acc);color:#07140e;font-weight:600}
+.note{font-size:12.5px;color:var(--mute);margin:10px 0 0}
+
+/* suites */
+.filterbar{display:flex;flex-wrap:wrap;gap:7px;align-items:center;margin:0 0 18px}
+.tag{border:1px solid var(--line);background:var(--chip);color:var(--ink);border-radius:999px;padding:3px 12px;font:inherit;font-size:13.5px;cursor:pointer}
+.tag:hover{border-color:var(--info)}
+.tag[aria-pressed="true"]{background:var(--info);border-color:var(--info);color:#06121b;font-weight:600}
+.clear{background:none;border:0;color:var(--info);cursor:pointer;font:inherit;font-size:13.5px;text-decoration:underline}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:18px 20px;transition:opacity .25s,border-color .25s}
+.card.dim{opacity:.28}
+.card.hit{border-color:var(--info)}
+.card h3{margin:0 0 2px;font-size:17px}
+.card .meta{color:var(--mute);font-size:13.5px;margin:0 0 10px}
+.card ul{margin:0;padding:0;list-style:none}
+.card li{padding:3px 0 3px 22px;position:relative;font-size:15px}
+.card li::before{content:"\2713";position:absolute;left:0;color:var(--pass);font-weight:700}
+.card li.run::before{content:"\25CF";color:var(--run)}
+.pill{display:inline-block;font-size:12px;border-radius:999px;padding:1px 9px;margin-left:6px;border:1px solid currentColor;vertical-align:1px}
+.pill.pass{color:var(--pass)}.pill.run{color:var(--run)}
+
+/* timeline */
+.axis{position:relative;height:30px;border-bottom:1px solid var(--line);margin-bottom:10px}
+.axis span{position:absolute;bottom:4px;transform:translateX(-50%);font-size:12px;color:var(--mute)}
+.lane{position:relative;height:40px;margin-bottom:8px}
+.bar{position:absolute;top:0;height:40px;border-radius:8px;padding:0 12px;display:flex;align-items:center;font-size:13.5px;font-weight:600;color:#06121b;cursor:pointer;border:0;text-align:left;overflow:hidden;white-space:nowrap}
+.bar.inf{background:var(--info)}.bar.glo{background:var(--acc)}
+.bar:hover,.bar[aria-expanded="true"]{outline:2px solid var(--ink);outline-offset:1px}
+.tip{min-height:92px}
+.tip h3{margin:0 0 4px;font-size:16px}
+.tip p{margin:0;color:var(--mute);font-size:15px}
+
+/* migration */
+.flow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:8px 0 4px}
+.node{background:var(--chip);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:14px}
+.node.to{border-color:var(--acc);color:var(--acc);font-weight:600}
+.arrow{color:var(--mute)}
+
+/* AI stepper */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin:0 0 14px}
+.step{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:10px;padding:12px;text-align:left;cursor:pointer;font:inherit}
+.step b{display:block;font-size:12px;color:var(--mute);margin-bottom:2px}
+.step span{font-size:14.5px;font-weight:600}
+.step[aria-selected="true"]{border-color:var(--acc);box-shadow:inset 0 0 0 1px var(--acc)}
+.detail{min-height:96px}
+.detail p{margin:0}
+.rca{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.rca span{border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:13.5px;background:var(--chip)}
+@media(max-width:720px){.steps{grid-template-columns:1fr 1fr}}
+
+/* skills */
+.skillgroup{margin:0 0 16px}
+.skillgroup h3{margin:0 0 8px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+
+/* repos */
+.repos{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:12px;margin-top:14px}
+.repo{display:block;text-decoration:none;color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.repo:hover{border-color:var(--info)}
+.repo b{color:var(--info);display:block}
+.repo p{margin:6px 0 4px;font-size:14px;color:var(--mute)}
+.repo small{color:var(--mute)}
+
+footer{border-top:1px solid var(--line);padding:26px 0 44px;color:var(--mute);font-size:14px}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top"><div class="wrap">
+  <div class="brand">Chinmay Raskar<small class="mono">career report</small></div>
+  <nav id="nav" aria-label="Sections">
+    <a href="#overview">Overview</a>
+    <a href="#metrics">Metrics</a>
+    <a href="#suites">Suites</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#ai">AI in QE</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio" data-gh hidden>Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div style="display:flex;gap:8px">
+    <button class="iconbtn" id="theme" aria-label="Toggle light or dark theme">Theme</button>
+    <button class="iconbtn menu" id="menu" aria-expanded="false" aria-controls="nav">Menu</button>
+  </div>
+</div></header>
+
+<main id="main">
+
+<!-- OVERVIEW -->
+<section id="overview" style="border-top:0">
+<div class="wrap">
+  <div class="hero">
+    <span class="badge mono"><span class="dot"></span>Pune, India | open to remote and relocation</span>
+    <h1>Chinmay Raskar</h1>
+    <p class="role">Test Automation Architect | QE Manager</p>
+    <p class="lead">11.5+ years in quality engineering. I design Playwright + TypeScript frameworks, lead the 20+ engineers who build on them, and run AI-assisted test automation experiments. This page is my career, written as a test run.</p>
+    <div class="btns">
+      <a class="btn primary" href="#contact">Get in touch</a>
+      <a class="btn" id="gh-btn" href="#" target="_blank" rel="noopener" hidden>GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/chinmay-raskar-8889327b" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" id="cv-btn" href="Chinmay_Raskar_Resume.pdf" download hidden>Resume (PDF)</a>
+    </div>
+  </div>
+
+  <div class="term mono" role="img" aria-label="Terminal showing a career test run: five suites passed, one still running">
+    <div class="bar"><i></i><i></i><i></i><span style="margin-left:8px">~/career</span><button class="clear dim" id="replay" style="margin-left:auto;color:#7d8996">replay</button></div>
+    <pre id="termout" aria-hidden="true"></pre>
+  </div>
+</div>
+</section>
+
+<!-- METRICS -->
+<section id="metrics"><div class="wrap">
+  <p class="eyebrow mono">run summary</p>
+  <h2>The numbers behind the work</h2>
+  <p class="sub">Figures are from my own accounts at Globant and Infosys. Where a number is a rounded or approximate result, it says so.</p>
+
+  <div class="grid g4" style="margin-bottom:14px">
+    <div class="tile"><div class="n"><em data-count="11.5" data-dec="1">0</em>+</div><div class="l">years in quality engineering</div></div>
+    <div class="tile"><div class="n"><em data-count="20">0</em>+</div><div class="l">engineers on my current team</div></div>
+    <div class="tile"><div class="n"><em data-count="40">0</em>+</div><div class="l">enterprise systems and integrations automated</div></div>
+    <div class="tile"><div class="n"><em data-count="12">0</em>+</div><div class="l">automation engineers onboarded in one account expansion</div></div>
+  </div>
+
+  <div class="grid g2">
+    <div class="panel">
+      <p class="eyebrow mono" style="margin-bottom:12px">regression automation, Endeavour</p>
+      <div class="row"><span>Automated today</span><b>1,500+ scenarios</b></div>
+      <div class="track"><div class="fill" data-w="42.9"></div></div>
+      <div class="row" style="margin-top:12px"><span>Roadmap</span><b>3,500+ scenarios</b></div>
+      <div class="track"><div class="fill amber" data-w="100"></div></div>
+      <p class="note">Bars are scaled to the roadmap target. Today is about 43% of it.</p>
+    </div>
+
+    <div class="panel">
+      <p class="eyebrow mono" style="margin-bottom:12px">production defect leakage, Endeavour</p>
+      <div class="seg" role="group" aria-label="Defect leakage view">
+        <button aria-pressed="true" data-leak="before">Before</button>
+        <button aria-pressed="false" data-leak="after">After</button>
+      </div>
+      <div class="row"><span>Leakage index</span><b id="leak-val">100</b></div>
+      <div class="track"><div class="fill amber" id="leak-fill" data-w="100"></div></div>
+      <p class="note">About 35% lower after API contract validation and earlier QA involvement in release planning. Indexed to a baseline of 100; this is a relative figure, not a defect count.</p>
+    </div>
+
+    <div class="panel">
+      <p class="eyebrow mono" style="margin-bottom:12px">coverage by programme</p>
+      <div class="row"><span>GreatMinds: critical backend authentication services</span><b>90%+</b></div>
+      <div class="track" style="margin-bottom:12px"><div class="fill" data-w="90"></div></div>
+      <div class="row"><span>SmileDirectClub: web and mobile</span><b>85-90%</b></div>
+      <div class="track" style="margin-bottom:12px"><div class="fill" data-w="87.5"></div></div>
+      <div class="row"><span>Infosys: regression on a CRM programme</span><b>70%</b></div>
+      <div class="track"><div class="fill" data-w="70"></div></div>
+      <p class="note">Each programme measured its own scope. Ranges are shown at their midpoint.</p>
+    </div>
+
+    <div class="panel">
+      <p class="eyebrow mono" style="margin-bottom:12px">other results</p>
+      <div class="grid" style="gap:12px">
+        <div><b style="font-size:26px;color:var(--acc)">800+</b> <span style="color:var(--mute)">tests automated across UI and microservices at GreatMinds</span></div>
+        <div><b style="font-size:26px;color:var(--acc)">~40%</b> <span style="color:var(--mute)">faster new-joiner ramp-up from structured documentation</span></div>
+        <div><b style="font-size:26px;color:var(--acc)">60%+</b> <span style="color:var(--mute)">manual effort cut on a CRM programme at Infosys</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- SUITES -->
+<section id="suites"><div class="wrap">
+  <p class="eyebrow mono">suites</p>
+  <h2>Four programmes, one thread: frameworks that teams keep using</h2>
+  <p class="sub">Pick a skill to see where I have used it. Matching cards light up, the rest fade.</p>
+  <div class="filterbar" id="filterbar" aria-label="Filter by skill"></div>
+
+  <div class="grid g2" id="cards">
+    <article class="card" data-skills="Playwright,TypeScript,Selenium,Azure DevOps,API testing,Test strategy,Release management,Mentoring,Hiring">
+      <h3>Endeavour Group <span class="pill run">in progress</span></h3>
+      <p class="meta">Globant | QA Manager and Test Architect | retail and hospitality | team of 20+</p>
+      <ul>
+        <li class="run">Migrating Selenium + C# to modular Playwright + TypeScript; I set the structure and run architecture reviews</li>
+        <li>40+ systems and integrations automated, 1,500+ regression scenarios</li>
+        <li>Defect leakage down about 35% through API contract validation</li>
+        <li>Release sign-offs, KPI reporting to client leadership, 12+ engineers onboarded</li>
+      </ul>
+    </article>
+    <article class="card" data-skills="TestCafe,TypeScript,Selenium,AWS,GitHub Actions,Prometheus and Grafana,Docker and Kubernetes,Mentoring">
+      <h3>GreatMinds <span class="pill pass">passed</span></h3>
+      <p class="meta">Globant | QA Automation Lead | edtech | team of 12 across India and LATAM</p>
+      <ul>
+        <li>Selenium-Java suite moved to TestCafe + TypeScript, 800+ tests</li>
+        <li>90%+ coverage of critical authentication services</li>
+        <li>Prometheus and Grafana dashboards for CI/CD metrics and root causes</li>
+        <li>Docker and Kubernetes infrastructure-testing POCs</li>
+      </ul>
+    </article>
+    <article class="card" data-skills="Python,Selenium,Appium,AWS,boto3">
+      <h3>SmileDirectClub <span class="pill pass">passed</span></h3>
+      <p class="meta">Globant | test automation | healthcare</p>
+      <ul>
+        <li>Python + Selenium web and Appium mobile automation</li>
+        <li>85-90% automation coverage</li>
+        <li>AWS services validated with the boto3 client</li>
+        <li>Suites run in an AWS CodePipeline and CodeBuild pipeline</li>
+      </ul>
+    </article>
+    <article class="card" data-skills="Selenium,Java,BDD,Azure DevOps,Jenkins,Mentoring,SAP">
+      <h3>Infosys <span class="pill pass">passed</span></h3>
+      <p class="meta">QA Automation Engineer to QA Lead | 2015 to 2021 | SAP, CRM, commerce</p>
+      <ul>
+        <li>Led 15+ engineers for UK and US clients</li>
+        <li>Hybrid SAP GUI + Selenium framework, Infosys Pioneer Award</li>
+        <li>70% regression automation on a CRM programme, 60%+ manual effort saved</li>
+        <li>BDD frameworks in Selenium, Java, TestNG, Cucumber for SAP Commerce</li>
+      </ul>
+    </article>
+  </div>
+</div></section>
+
+<!-- TIMELINE -->
+<section id="timeline"><div class="wrap">
+  <p class="eyebrow mono">timeline</p>
+  <h2>2015 to now</h2>
+  <p class="sub">Select a bar for the detail.</p>
+  <div class="panel">
+    <div class="axis" id="axis" aria-hidden="true"></div>
+    <div class="lane"><button class="bar inf" id="b-inf" style="left:1.67%;width:48.3%" aria-expanded="false">Infosys</button></div>
+    <div class="lane"><button class="bar glo" id="b-glo" style="left:50%;width:49.2%" aria-expanded="true">Globant</button></div>
+    <div class="tip" id="tip" aria-live="polite"></div>
+  </div>
+
+  <div class="panel" style="margin-top:14px">
+    <p class="eyebrow mono" style="margin-bottom:6px">framework migrations</p>
+    <div class="flow"><span class="node">Selenium + Java</span><span class="arrow">&rarr;</span><span class="node to">TestCafe + TypeScript</span><span class="mono dim" style="color:var(--mute);font-size:13px">GreatMinds</span></div>
+    <div class="flow"><span class="node">Selenium + C#</span><span class="arrow">&rarr;</span><span class="node to">Playwright + TypeScript</span><span class="mono" style="color:var(--run);font-size:13px">Endeavour, in progress</span></div>
+    <div class="flow"><span class="node">SAP GUI</span><span class="arrow">+</span><span class="node">Selenium</span><span class="arrow">&rarr;</span><span class="node to">hybrid framework</span><span class="mono" style="color:var(--mute);font-size:13px">Infosys</span></div>
+  </div>
+</div></section>
+
+<!-- AI -->
+<section id="ai"><div class="wrap">
+  <p class="eyebrow mono">proof of concept</p>
+  <h2>AI-assisted regression automation</h2>
+  <p class="sub">A pilot I built and demoed for one team to clear its regression automation backlog by reusing test cases that already existed. Select a step.</p>
+  <div class="steps" role="tablist" aria-label="Pipeline steps" id="steps">
+    <button class="step" role="tab" aria-selected="true" data-i="0"><b class="mono">STEP 1</b><span>Regression test cases</span></button>
+    <button class="step" role="tab" aria-selected="false" data-i="1"><b class="mono">STEP 2</b><span>FRD-mapping agent</span></button>
+    <button class="step" role="tab" aria-selected="false" data-i="2"><b class="mono">STEP 3</b><span>Playwright MCP</span></button>
+    <button class="step" role="tab" aria-selected="false" data-i="3"><b class="mono">STEP 4</b><span>Stakeholder dashboard</span></button>
+  </div>
+  <div class="panel detail" id="detail" role="tabpanel" aria-live="polite"></div>
+</div></section>
+
+<!-- SKILLS -->
+<section id="skills"><div class="wrap">
+  <p class="eyebrow mono">toolbox</p>
+  <h2>What I work with</h2>
+  <p class="sub">Select a skill to jump to the suites that use it.</p>
+  <div class="skillgroup"><h3>Automation</h3><div class="chips" data-chips="Playwright,TypeScript,Selenium,TestCafe,Appium,Python,Java,API testing,BDD"></div></div>
+  <div class="skillgroup"><h3>CI/CD and cloud</h3><div class="chips" data-chips="Azure DevOps,GitHub Actions,Jenkins,AWS,boto3,Docker and Kubernetes,Prometheus and Grafana"></div></div>
+  <div class="skillgroup"><h3>Leadership</h3><div class="chips" data-chips="Test strategy,Release management,Mentoring,Hiring"></div></div>
+</div></section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio" data-gh hidden><div class="wrap">
+  <p class="eyebrow mono">packages</p>
+  <h2>GitHub portfolio</h2>
+  <p class="sub" style="margin-bottom:0">Recent public repositories, pulled live from <a id="gh-link" href="#" target="_blank" rel="noopener">GitHub</a>.</p>
+  <div class="repos" id="repos"></div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact"><div class="wrap">
+  <p class="eyebrow mono">contact</p>
+  <h2>Let's talk about test architecture and quality leadership</h2>
+  <p class="sub">Architect, SDET lead and QE manager roles, in India or abroad.</p>
+  <div class="btns">
+    <a class="btn primary" href="mailto:chin9111992@gmail.com">chin9111992@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/chinmay-raskar-8889327b" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" id="gh-btn2" href="#" target="_blank" rel="noopener" hidden>GitHub</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">&copy; 2026 Chinmay Raskar | Pune, India</div></footer>
+
+<script>
+/* ---- Edit these two lines, then redeploy ---- */
+const GITHUB_USER = "";          // your GitHub username, e.g. "chinmayraskar"
+const HAS_RESUME_PDF = false;    // true once Chinmay_Raskar_Resume.pdf sits next to index.html
+/* --------------------------------------------- */
+
+const $ = (s, r=document) => r.querySelector(s);
+const $$ = (s, r=document) => [...r.querySelectorAll(s)];
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+/* theme */
+(function(){
+  let t = null;
+  try { t = localStorage.getItem("theme"); } catch(e){}
+  if (!t) t = matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  document.documentElement.dataset.theme = t;
+  $("#theme").onclick = () => {
+    const n = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
+    document.documentElement.dataset.theme = n;
+    try { localStorage.setItem("theme", n); } catch(e){}
+  };
+})();
+
+/* mobile menu */
+$("#menu").onclick = e => {
+  const o = $("#nav").classList.toggle("open");
+  e.currentTarget.setAttribute("aria-expanded", o);
+};
+$$("#nav a").forEach(a => a.addEventListener("click", () => $("#nav").classList.remove("open")));
+
+/* scrollspy */
+const spy = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) $$("#nav a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + e.target.id));
+}), {rootMargin:"-45% 0px -50% 0px"});
+$$("main section[id]").forEach(s => spy.observe(s));
+
+/* terminal */
+const lines = [
+  ["$ npx playwright test --project=career", ""],
+  ["  ", "ok", "✓", " infosys       hybrid SAP GUI + Selenium framework (Pioneer Award)"],
+  ["  ", "ok", "✓", " greatminds    Selenium-Java to TestCafe + TypeScript, 800+ tests"],
+  ["  ", "ok", "✓", " smiledirect   Python, Selenium, Appium and boto3 on AWS"],
+  ["  ", "ok", "✓", " endeavour     AI-assisted regression POC, demoed"],
+  ["  ", "warn", "●", " endeavour     Selenium/C# to Playwright + TypeScript, 40+ systems, still running"],
+  ["", ""],
+  ["  4 passed, 1 running, 0 failed", "dim"]
+];
+function renderTerm(animate){
+  const out = $("#termout"); out.textContent = "";
+  let i = 0;
+  const html = [];
+  const esc = s => s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  const fmt = l => l.length === 2 && l[1] === "" ? esc(l[0])
+    : l.length === 2 ? `<span class="${l[1]}">${esc(l[0])}</span>`
+    : `${l[0]}<span class="${l[1]}">${l[2]}</span>${esc(l[3])}`;
+  const draw = () => { out.innerHTML = html.join("\n") + (i < lines.length ? '\n<span class="cursor"></span>' : '\n<span class="cursor"></span>'); };
+  if (!animate) { lines.forEach(l => html.push(fmt(l))); i = lines.length; draw(); return; }
+  (function next(){
+    if (i >= lines.length) return;
+    html.push(fmt(lines[i])); i++; draw();
+    setTimeout(next, i === 1 ? 650 : 420);
+  })();
+}
+let termStarted = false;
+new IntersectionObserver((es, ob) => { if (es[0].isIntersecting && !termStarted){ termStarted = true; renderTerm(!reduce); ob.disconnect(); } }, {threshold:.3}).observe($(".term"));
+$("#replay").onclick = () => renderTerm(!reduce);
+
+/* counters and bars when visible */
+function countUp(el){
+  const end = parseFloat(el.dataset.count), dec = +el.dataset.dec || 0;
+  if (reduce){ el.textContent = end.toFixed(dec); return; }
+  const t0 = performance.now(), d = 1100;
+  (function f(t){
+    const p = Math.min(1, (t - t0) / d), e = 1 - Math.pow(1 - p, 3);
+    el.textContent = (end * e).toFixed(dec);
+    if (p < 1) requestAnimationFrame(f);
+  })(t0);
+}
+new IntersectionObserver((es, ob) => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  $$("[data-count]", e.target).forEach(countUp);
+  $$(".fill", e.target).forEach(f => f.style.width = f.dataset.w + "%");
+  ob.unobserve(e.target);
+}), {threshold:.25}).observe($("#metrics"));
+
+/* leakage toggle */
+$$("[data-leak]").forEach(b => b.onclick = () => {
+  $$("[data-leak]").forEach(x => x.setAttribute("aria-pressed", x === b));
+  const after = b.dataset.leak === "after";
+  $("#leak-fill").style.width = (after ? 65 : 100) + "%";
+  $("#leak-val").textContent = after ? "~65" : "100";
+});
+
+/* skill filter */
+const allSkills = [...new Set($$("#cards .card").flatMap(c => c.dataset.skills.split(",")))];
+let active = null;
+function applyFilter(){
+  $$("#cards .card").forEach(c => {
+    const hit = active && c.dataset.skills.split(",").includes(active);
+    c.classList.toggle("hit", !!hit);
+    c.classList.toggle("dim", !!active && !hit);
+  });
+  $$(".tag").forEach(t => t.setAttribute("aria-pressed", t.dataset.skill === active));
+  $("#clear") && ($("#clear").hidden = !active);
+}
+function toggle(skill, jump){
+  active = active === skill && !jump ? null : skill;
+  applyFilter();
+  if (jump && active) $("#suites").scrollIntoView({behavior: reduce ? "auto" : "smooth"});
+}
+const fb = $("#filterbar");
+["Playwright","TypeScript","Selenium","Python","AWS","Mentoring"].forEach(s => {
+  const b = document.createElement("button");
+  b.className = "tag"; b.dataset.skill = s; b.textContent = s; b.setAttribute("aria-pressed","false");
+  b.onclick = () => toggle(s, false); fb.append(b);
+});
+const clr = document.createElement("button"); clr.className = "clear"; clr.id = "clear"; clr.textContent = "clear"; clr.hidden = true;
+clr.onclick = () => { active = null; applyFilter(); }; fb.append(clr);
+$$("[data-chips]").forEach(box => box.dataset.chips.split(",").forEach(s => {
+  const b = document.createElement("button");
+  b.className = "tag"; b.dataset.skill = s; b.textContent = s; b.setAttribute("aria-pressed","false");
+  b.onclick = () => toggle(s, true); box.append(b);
+}));
+
+/* timeline */
+(function(){
+  const start = 2015, end = 2027, span = end - start, ax = $("#axis");
+  for (let y = start; y <= end; y += 2){
+    const s = document.createElement("span"); s.className = "mono"; s.textContent = y;
+    s.style.left = ((y - start) / span * 100) + "%"; ax.append(s);
+  }
+  const info = {
+    inf: ["Infosys | QA Automation Engineer to QA Lead | March 2015 to 2021", "SAP ERP, CRM, retail and commerce programmes for UK and US clients. Led 15+ engineers, built a hybrid SAP GUI and Selenium framework (Pioneer Award), and built BDD frameworks for SAP Commerce."],
+    glo: ["Globant | QA Manager and Test Automation Architect | 2021 to present", "Endeavour Group (retail and hospitality), GreatMinds (edtech) and SmileDirectClub (healthcare). Today: Playwright + TypeScript architecture, a team of 20+, release governance and AI-assisted QE experiments."]
+  };
+  const tip = $("#tip");
+  function show(k){
+    tip.innerHTML = "<h3></h3><p></p>";
+    $("h3", tip).textContent = info[k][0]; $("p", tip).textContent = info[k][1];
+    $("#b-inf").setAttribute("aria-expanded", k === "inf");
+    $("#b-glo").setAttribute("aria-expanded", k === "glo");
+  }
+  $("#b-inf").onclick = () => show("inf"); $("#b-glo").onclick = () => show("glo");
+  show("glo");
+})();
+
+/* AI stepper */
+(function(){
+  const d = [
+    ["Start from tests that already exist", "The input is the set of detailed regression test cases already written for the team. Nothing is generated from a blank page, so the automation stays tied to what the team already agreed was worth testing."],
+    ["Check them against the requirements", "An FRD-mapping agent compares each test case with the Jira user stories, so every test is tied to a requirement before any code is written."],
+    ["Generate the automation", "Playwright MCP automates the mapped tests inside the existing framework standards, with locator fallbacks and self-healing so a changed selector does not break a test."],
+    ["Show stakeholders what happened", "A dashboard reports tests executed, status, mapping to BRD functionality, business value, and a root-cause category for each failure."]
+  ];
+  const rca = ["Functional bug","Synchronisation bug","Flakiness","Locator failure"];
+  const box = $("#detail");
+  function show(i){
+    box.innerHTML = "";
+    const h = document.createElement("h3"); h.style.margin = "0 0 6px"; h.textContent = d[i][0];
+    const p = document.createElement("p"); p.textContent = d[i][1];
+    box.append(h, p);
+    if (i === 3){
+      const r = document.createElement("div"); r.className = "rca";
+      rca.forEach(x => { const s = document.createElement("span"); s.textContent = x; r.append(s); });
+      box.append(r);
+    }
+    $$(".step").forEach((s, j) => s.setAttribute("aria-selected", i === j));
+  }
+  $$(".step").forEach(s => s.onclick = () => show(+s.dataset.i));
+  show(0);
+})();
+
+/* resume + github */
+if (HAS_RESUME_PDF) $("#cv-btn").hidden = false;
+if (GITHUB_USER){
+  const url = "https://github.com/" + GITHUB_USER;
+  ["#gh-btn","#gh-btn2"].forEach(s => { const a = $(s); a.href = url; a.hidden = false; });
+  $("#gh-link").href = url;
+  $$("[data-gh]").forEach(e => e.hidden = false);
+  fetch("https://api.github.com/users/" + GITHUB_USER + "/repos?sort=updated&per_page=30")
+    .then(r => r.ok ? r.json() : Promise.reject())
+    .then(list => {
+      const box = $("#repos");
+      list.filter(r => !r.fork).slice(0, 6).forEach(r => {
+        const a = document.createElement("a"); a.className = "repo"; a.href = r.html_url; a.target = "_blank"; a.rel = "noopener";
+        const b = document.createElement("b"); b.textContent = r.name;
+        const p = document.createElement("p"); p.textContent = r.description || "No description yet.";
+        const s = document.createElement("small"); s.textContent = [r.language, r.stargazers_count ? r.stargazers_count + " stars" : ""].filter(Boolean).join(" | ");
+        a.append(b, p, s); box.append(a);
+      });
+      if (!box.children.length) box.innerHTML = '<p class="sub">Repositories will appear here once you make some public.</p>';
+    })
+    .catch(() => { $("#repos").innerHTML = '<p class="sub">Could not load repositories right now. Use the link above.</p>'; });
+}
+</script>
+</body>
+</html>
